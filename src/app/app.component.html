@@ -1,9 +1,10 @@
-
-<main class="weather-app">
-  <form action="">
-    <div class="searchBox">
-      <input type="text" placeholder="City">
-    </div>
-  </form>
+<main>
+  <section class="weather-app">
+    <app-search-box></app-search-box>
+    <app-main-info></app-main-info>
+    <div class="line"></div>
+    <app-details></app-details>
+  </section>
 </main>
+
 <router-outlet></router-outlet>
