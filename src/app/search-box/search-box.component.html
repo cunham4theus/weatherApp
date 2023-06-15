@@ -1,6 +1,7 @@
    <form action="">
-      <div class="searchBox">
-        <img class="search-icon" src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/%F0%9F%A6%86%20icon%20_search%20normal%201_.svg" alt="">
-        <input type="text" placeholder="City">
+      <div [formGroup]="searchForm" class="searchBox">
+        <img (click)="getSearch()" class="search-icon" src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/%F0%9F%A6%86%20icon%20_search%20normal%201_.svg" alt="">
+        <input  name="search" formControlName="search" type="text" placeholder="City" (keydown.enter)="onEnter($event)">
+        <!-- <span *ngIf="f.search.errors && f.search.touched" class="error">Somente letras</span> pattern erro -->
       </div>
     </form>

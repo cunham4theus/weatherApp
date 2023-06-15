@@ -3,7 +3,8 @@
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  justify-content: space-evenly;
+    gap: 4rem;
   &::after {
     content: "";
     width: 100%;

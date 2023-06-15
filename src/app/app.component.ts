@@ -8,9 +8,14 @@ import { WeatherService } from './weather.service'; // import weather service
 })
 export class AppComponent {
   title = 'weatherApp';
-  constructor(private weather: WeatherService) {
+  constructor(private weather: WeatherService) {}
+  weatherInfo: any = [];
+  city: string = 'bogota';
+  searchValue: string = '';
+  getWeatherInfo(value: string) {
+    this.city = value;
     this.weather
-      .getFromUserSelection('london')
-      .subscribe((data) => console.log(data));
+      .getFromUserSelection(value)
+      .subscribe((data) => (this.weatherInfo = data));
   }
 }

@@ -1,27 +1,27 @@
 <section class="details">
-  <p class="minmax">30°C min / 35°C max</p>
+  <p class="minmax">{{ weatherInfo.main.temp_min }}°C min / {{ weatherInfo.main.temp_max }}°C max</p>
   <div class="line"></div>
   <div class="wind">
     <img src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/wind-svgrepo-com.svg" alt="">
-    <span class="wind-detail">2.57m/s</span>
+    <span class="wind-detail">{{weatherInfo.wind.speed}}m/s</span>
   </div>
   <div class="line"></div>
 
   <div class="cloud">
     <img src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/cloud.svg" alt="">
-    <span class="wind-detail">60%</span>
+    <span class="wind-detail">{{weatherInfo.clouds.all}}%</span>
   </div>
   <div class="line"></div>
 
   <div class="umidity">
     <img src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/water-drop-svgrepo-com.svg" alt="">
-    <span class="wind-detail">50%</span>
+    <span class="wind-detail">{{weatherInfo.main.humidity}}%</span>
   </div>
   <div class="line"></div>
 
   <div class="pressure">
     <img src="https://raw.githubusercontent.com/cunham4theus/weatherApp/8bbd7b8c3d1e8d6fb132263fb9972cb5a4bd03a2/src/assets/speed-svgrepo-com.svg" alt="">
-    <span class="wind-detail">1024hPa</span>
+    <span class="wind-detail">{{weatherInfo.main.pressure}}hPa</span>
   </div>
 
 </section>

@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { MainInfoComponent } from './main-info/main-info.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { DetailsComponent } from './details/details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, MainInfoComponent, SearchBoxComponent, DetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,9 +1,9 @@
 <main>
   <section class="weather-app">
-    <app-search-box></app-search-box>
-    <app-main-info></app-main-info>
+    <app-search-box (searchValue)="getWeatherInfo($event)"></app-search-box>
+    <app-main-info [weatherInfo]="weatherInfo"></app-main-info>
     <div class="line"></div>
-    <app-details></app-details>
+    <app-details [weatherInfo]="weatherInfo"></app-details>
   </section>
 </main>
 
